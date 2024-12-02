@@ -1,0 +1,3 @@
+121 items
+Clicked enabled button with index: 10 in section: 0
+Add to Cart button is enabled.
