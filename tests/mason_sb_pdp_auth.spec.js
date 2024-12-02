@@ -43,45 +43,45 @@ test.describe("Mason PDP", () => {
     }
   })
 
-  //PDP - Display of Selected Variant Image - Test Cases ID-SB-PDP017/SB-PDP019
-  test.skip("PDP - Display of Selected Variant Image - Verify that selected variant’s image is displayed  as full sized to the left", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_diff_color);
-    await pdpPage.verifyImageChangesOnVariantSelection();
-  })
+  // //PDP - Display of Selected Variant Image - Test Cases ID-SB-PDP017/SB-PDP019
+  // test.skip("PDP - Display of Selected Variant Image - Verify that selected variant’s image is displayed  as full sized to the left", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_diff_color);
+  //   await pdpPage.verifyImageChangesOnVariantSelection();
+  // })
 
-  //PDP - Image Navigation with Left and Right Arrows - Test Cases ID-SB-PDP026
-  test.skip("PDP - Image Navigation with Left and Right Arrows - Verify left and right navigation arrows on the main image displayed", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url_carousel);
-    await pdpPage.clickLeftRightCarouselButton();
-  })
+  // //PDP - Image Navigation with Left and Right Arrows - Test Cases ID-SB-PDP026
+  // test.skip("PDP - Image Navigation with Left and Right Arrows - Verify left and right navigation arrows on the main image displayed", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url_carousel);
+  //   await pdpPage.clickLeftRightCarouselButton();
+  // })
 
-  //PDP - Display of Additional Images as Thumbnails - Test Cases ID-SB-PDP028
-  test.skip("PDP - Display of Additional Images as Thumbnails - Verify additional images associated with variants thumbnail images,variant has more than 5 image associated with it, system shall display left and right navigation arrows.", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url);
-    await pdpPage.thumbnailImageLeftRightArrowDisplay();
-  })
+  // //PDP - Display of Additional Images as Thumbnails - Test Cases ID-SB-PDP028
+  // test.skip("PDP - Display of Additional Images as Thumbnails - Verify additional images associated with variants thumbnail images,variant has more than 5 image associated with it, system shall display left and right navigation arrows.", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url);
+  //   await pdpPage.thumbnailImageLeftRightArrowDisplay();
+  // })
 
-  //PDP - Highlighting Selected Thumbnail Image - Test Cases ID-SB-PDP029
-  test.skip("PDP - Highlighting Selected Thumbnail Image - Verify that system can highlight with a black outline the thumbnail image that corresponds to the image currently being viewed as full sized.", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url);
-    await pdpPage.validateThumbnailImageSelection();
-  })
+  // //PDP - Highlighting Selected Thumbnail Image - Test Cases ID-SB-PDP029
+  // test.skip("PDP - Highlighting Selected Thumbnail Image - Verify that system can highlight with a black outline the thumbnail image that corresponds to the image currently being viewed as full sized.", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url);
+  //   await pdpPage.validateThumbnailImageSelection();
+  // })
 
   //PDP - Product Data Display (Name, Item #, Reviews, Shop All Link, Color, Size, Size Chart Link, Pricing) - Test Cases ID-SB-PDP009/SB-PDP010/SB-PDP011/SB-PDP016
   test("PDP - Product Data Display (Name, Item #, Reviews, Shop All Link, Color, Size, Size Chart Link, Pricing) - Verify Display of various product data.", async ({ page }, testInfo) => {
@@ -104,58 +104,58 @@ test.describe("Mason PDP", () => {
     await pdpPage.validateSelectColorValue();
   })
 
-  //PDP - Display Sale Pricing and Percentage Saved - Test Cases ID-SB-PDP043
-  test.skip("PDP - Display Sale Pricing and Percentage Saved - Verify Sitewide sale pricing shall be displayed bolded in red if the product is on sale followed by the regular retail price.", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url_saleprice);
-    await pdpPage.validatePricingSection();
-  })
+  // //PDP - Display Sale Pricing and Percentage Saved - Test Cases ID-SB-PDP043
+  // test.skip("PDP - Display Sale Pricing and Percentage Saved - Verify Sitewide sale pricing shall be displayed bolded in red if the product is on sale followed by the regular retail price.", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url_saleprice);
+  //   await pdpPage.validatePricingSection();
+  // })
 
-  //PDP - Display Dynamic Credit Messaging and Promotional Text - Test Cases ID-SB-PDP048
-  test.skip("PDP - Display Dynamic Credit Messaging and Promotional Text - Verify Dynamic Credit Specific Messaging and/or Promotional Text:", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url);
-    await pdpPage.validateCreditMessageSection();
-  })
+  // //PDP - Display Dynamic Credit Messaging and Promotional Text - Test Cases ID-SB-PDP048
+  // test.skip("PDP - Display Dynamic Credit Messaging and Promotional Text - Verify Dynamic Credit Specific Messaging and/or Promotional Text:", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url);
+  //   await pdpPage.validateCreditMessageSection();
+  // })
 
-  //PDP - Description and Specifications Display - Test Cases ID-SB-PDP048
-  test.skip("PDP - Description,Specifications and Shipping Display - Verify the Display of description,specifications and shipping section:", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url);
-    await pdpPage.validateDescription();
-    await pdpPage.validateSpecifications();
-    await pdpPage.validateShipping();
-  })
+  // //PDP - Description and Specifications Display - Test Cases ID-SB-PDP048
+  // test.skip("PDP - Description,Specifications and Shipping Display - Verify the Display of description,specifications and shipping section:", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url);
+  //   await pdpPage.validateDescription();
+  //   await pdpPage.validateSpecifications();
+  //   await pdpPage.validateShipping();
+  // })
 
-  //PDP - Ways to Wear It Section - Test Cases ID-SB-PDP067
-  test.skip("PDP - Ways to Wear It Section - Verify Ways to wear content:", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url_waystowearit);
-    await pdpPage.validateWaysToWearIt();
-  })
+  // //PDP - Ways to Wear It Section - Test Cases ID-SB-PDP067
+  // test.skip("PDP - Ways to Wear It Section - Verify Ways to wear content:", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url_waystowearit);
+  //   await pdpPage.validateWaysToWearIt();
+  // })
 
-  //PDP - Reviews and Questions & Answers Display - Test Cases ID-SB-PDP084/SB-PDP085
-  test.skip("PDP - Reviews and Questions & Answers Display - Verify Power review and Q&A content:", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url_reviews);
-    await pdpPage.validateReviews();
-    await pdpPage.validateQuestionsAnswers();
-  })
+  // //PDP - Reviews and Questions & Answers Display - Test Cases ID-SB-PDP084/SB-PDP085
+  // test.skip("PDP - Reviews and Questions & Answers Display - Verify Power review and Q&A content:", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url_reviews);
+  //   await pdpPage.validateReviews();
+  //   await pdpPage.validateQuestionsAnswers();
+  // })
 
   //PDP - Quantity field & Stock Availability: Display - Test Cases ID
   test("PDP - Quantity field & Stock Availability: Display - Verify Quantity field & Stock Availability display:", async ({ page }, testInfo) => {
@@ -178,15 +178,15 @@ test.describe("Mason PDP", () => {
     await pdpPage.validateProductQTYIncreaseDecrease();
   })
 
-  //PDP - Quantity field & Stock Availability: Display - Test Cases ID
-  test.skip("PDP - Quantity update - Verify Quantity update on entering value in the Quantity textbox:", async ({ page }, testInfo) => {
-    if (!loginSuccessful) {
-      test.skip('Skipping test due to failed login');
-    }
-    const pdpPage = new PDPPage(page);
-    await page.goto(pdp_data.pdp_url);
-    await pdpPage.validateProductQTYUpdateByTypeIn(pdp_data.product_quantity);
-  })
+  // //PDP - Quantity field & Stock Availability: Display - Test Cases ID
+  // test.skip("PDP - Quantity update - Verify Quantity update on entering value in the Quantity textbox:", async ({ page }, testInfo) => {
+  //   if (!loginSuccessful) {
+  //     test.skip('Skipping test due to failed login');
+  //   }
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(pdp_data.pdp_url);
+  //   await pdpPage.validateProductQTYUpdateByTypeIn(pdp_data.product_quantity);
+  // })
 
   //PDP - Quantity field & Stock Availability: Display - Test Cases ID
   test("PDP - Add To Cart - Verify on clicking Add To Cart CTA the product variant will be added to the user’s cart update the numeric qty of items displayed under the cart icon within the Global Header.", async ({ page }, testInfo) => {

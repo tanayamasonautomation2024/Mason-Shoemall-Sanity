@@ -71,67 +71,67 @@ test.describe("Mason PLP Scenarios", () => {
   })
 
 
-  //SB-PLP048
-  test.skip("Validate Single Filter applied in L3 PLP", async ({ page }) => {
-    //test.slow();
-    const homePage = new HomePage(page);
-    const plpPage = new MasonPLPPage(page);
-    await page.goto(plp_data.plp_url_with_size_color);
-    await plpPage.validateItemCount();
-    await plpPage.validatePresenceOfFilter();
-    await plpPage.validateFiltersForAllTypes();
-    //const selectedFilter =await plpPage.randomlySelectFilterCheckbox();
-    const selectedFilter = await plpPage.randomlySelectFilterCheckbox(1);
-    await plpPage.validateAppliedFilters(selectedFilter);
-    console.log(selectedFilter);
-  })
+  // //SB-PLP048
+  // test.skip("Validate Single Filter applied in L3 PLP", async ({ page }) => {
+  //   //test.slow();
+  //   const homePage = new HomePage(page);
+  //   const plpPage = new MasonPLPPage(page);
+  //   await page.goto(plp_data.plp_url_with_size_color);
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validatePresenceOfFilter();
+  //   await plpPage.validateFiltersForAllTypes();
+  //   //const selectedFilter =await plpPage.randomlySelectFilterCheckbox();
+  //   const selectedFilter = await plpPage.randomlySelectFilterCheckbox(1);
+  //   await plpPage.validateAppliedFilters(selectedFilter);
+  //   console.log(selectedFilter);
+  // })
 
-  //SB-PLP049,55
-  test.skip("Validate Multiple Filters applied in L3 PLP", async ({ page }) => {
-    //test.slow();
-    //const homePage = new HomePage(page);
-    const plpPage = new MasonPLPPage(page);
-    const homePageNew = new HomePageNew(page);
-    await page.goto(plp_data.plp_url_with_size_color);
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateItemCount();
-    await plpPage.validatePresenceOfFilter();
-    await plpPage.validateFiltersForAllTypes();
-    const numOptionsPerCategory = 2;
-    const selectedFilters = await plpPage.randomlySelectFilterCheckbox(numOptionsPerCategory);
-    await plpPage.validateAppliedFilters(selectedFilters);
-    // for (let i = 0; i < numOptionsPerCategory; i++) {
-    //   const selectedFilter = await plpPage.randomlySelectFilterCheckbox(1);
-    //   selectedFilters.push(selectedFilter);
-    //   await plpPage.validateAppliedFilters(selectedFilter);
-    //   console.log('Selected filter:', selectedFilter);
-    // }
-  })
+  // //SB-PLP049,55
+  // test.skip("Validate Multiple Filters applied in L3 PLP", async ({ page }) => {
+  //   //test.slow();
+  //   //const homePage = new HomePage(page);
+  //   const plpPage = new MasonPLPPage(page);
+  //   const homePageNew = new HomePageNew(page);
+  //   await page.goto(plp_data.plp_url_with_size_color);
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validatePresenceOfFilter();
+  //   await plpPage.validateFiltersForAllTypes();
+  //   const numOptionsPerCategory = 2;
+  //   const selectedFilters = await plpPage.randomlySelectFilterCheckbox(numOptionsPerCategory);
+  //   await plpPage.validateAppliedFilters(selectedFilters);
+  //   // for (let i = 0; i < numOptionsPerCategory; i++) {
+  //   //   const selectedFilter = await plpPage.randomlySelectFilterCheckbox(1);
+  //   //   selectedFilters.push(selectedFilter);
+  //   //   await plpPage.validateAppliedFilters(selectedFilter);
+  //   //   console.log('Selected filter:', selectedFilter);
+  //   // }
+  // })
 
-  //SB-PLP050
-  test.skip("Validate Expand and Close option for the Filters", async ({ page }) => {
-    //test.slow();
-    //const homePage = new HomePage(page);
-    const plpPage = new MasonPLPPage(page);
-    const homePageNew = new HomePageNew(page);
-    await page.goto(plp_data.plp_url_with_size_color);
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateItemCount();
-    await plpPage.validateFilterExpandClose();
-  })
+  // //SB-PLP050
+  // test.skip("Validate Expand and Close option for the Filters", async ({ page }) => {
+  //   //test.slow();
+  //   //const homePage = new HomePage(page);
+  //   const plpPage = new MasonPLPPage(page);
+  //   const homePageNew = new HomePageNew(page);
+  //   await page.goto(plp_data.plp_url_with_size_color);
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validateFilterExpandClose();
+  // })
 
-  //SB-PLP051,52,53
-  test.skip("Validate View More link for more than 8 or 16 options", async ({ page }) => {
-    //test.slow();
-    const plpPage = new MasonPLPPage(page);
-    const homePageNew = new HomePageNew(page);
-    const homePage = new HomePage(page);
-    await page.goto(plp_data.plp_url);
-    await plpPage.validateItemCount();
-    await plpPage.validatePresenceOfFilter();
-    await plpPage.validateFiltersForAllTypes();
-    await plpPage.validateViewMoreOption();
-  })
+  // //SB-PLP051,52,53
+  // test.skip("Validate View More link for more than 8 or 16 options", async ({ page }) => {
+  //   //test.slow();
+  //   const plpPage = new MasonPLPPage(page);
+  //   const homePageNew = new HomePageNew(page);
+  //   const homePage = new HomePage(page);
+  //   await page.goto(plp_data.plp_url);
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validatePresenceOfFilter();
+  //   await plpPage.validateFiltersForAllTypes();
+  //   await plpPage.validateViewMoreOption();
+  // })
 
   //SB-PLP062
   test("Validate SortBy in PLP", async ({ page }) => {
@@ -166,39 +166,39 @@ test.describe("Mason PLP Scenarios", () => {
 
   })
 
-  //SB-PLPADC002,01,04,05,06,07,08
-  test.skip("Validate Navigation Arrows in PLP - Add to cart drawer", async ({ page }) => {
-    //test.slow();
-    //const homePage = new HomePage(page);
-    const plpPage = new MasonPLPPage(page);
-    const homePageNew = new HomePageNew(page);
-    await page.goto(plp_data.plp_url_with_size_color);
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateItemCount();
-    await plpPage.validatePresenceOfFilter();
-    await plpPage.clickQuickView();
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateChooseOptionDrawer();
-    await plpPage.validateImageInChooseOptionDrawer();
-    //await plpPage.validateNavigationArrows();
-    //await plpPage.closeChooseOptionDrawer();
-  })
+  // //SB-PLPADC002,01,04,05,06,07,08
+  // test.skip("Validate Navigation Arrows in PLP - Add to cart drawer", async ({ page }) => {
+  //   //test.slow();
+  //   //const homePage = new HomePage(page);
+  //   const plpPage = new MasonPLPPage(page);
+  //   const homePageNew = new HomePageNew(page);
+  //   await page.goto(plp_data.plp_url_with_size_color);
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validatePresenceOfFilter();
+  //   await plpPage.clickQuickView();
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateChooseOptionDrawer();
+  //   await plpPage.validateImageInChooseOptionDrawer();
+  //   //await plpPage.validateNavigationArrows();
+  //   //await plpPage.closeChooseOptionDrawer();
+  // })
 
-  //SB-PLPADC002,01,04,05,06
-  test.skip("Validate Close Option in Add to Cart drawer in PLP", async ({ page }) => {
-    //test.slow();
-    //const homePage = new HomePage(page);
-    const plpPage = new MasonPLPPage(page);
-    const homePageNew = new HomePageNew(page);
-    await page.goto(plp_data.plp_url_with_size_color);
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateItemCount();
-    await plpPage.validatePresenceOfFilter();
-    await plpPage.clickQuickView();
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateChooseOptionDrawer();
-    await plpPage.closeChooseOptionDrawer();
-  })
+  // //SB-PLPADC002,01,04,05,06
+  // test.skip("Validate Close Option in Add to Cart drawer in PLP", async ({ page }) => {
+  //   //test.slow();
+  //   //const homePage = new HomePage(page);
+  //   const plpPage = new MasonPLPPage(page);
+  //   const homePageNew = new HomePageNew(page);
+  //   await page.goto(plp_data.plp_url_with_size_color);
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validatePresenceOfFilter();
+  //   await plpPage.clickQuickView();
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateChooseOptionDrawer();
+  //   await plpPage.closeChooseOptionDrawer();
+  // })
 
 
   //SB-PLPADC0010,23,24,41
@@ -241,24 +241,24 @@ test.describe("Mason PLP Scenarios", () => {
 
   })
 
-  //SB-PLPADC0017
-  test.skip("Validate View More Option in Choose Options drawer in PLP", async ({ page }) => {
-    //test.slow();
-    //const homePage = new HomePage(page);
-    const plpPage = new MasonPLPPage(page);
-    const homePageNew = new HomePageNew(page);
-    const pdpPage = new PDPPage(page);
-    await page.goto(plp_data.plp_url_with_size_color);
-    //await page.waitForLoadState('networkidle');
-    await plpPage.validateItemCount();
-    await plpPage.validatePresenceOfFilter();
-    await plpPage.clickQuickView();
-    ////await page.waitForLoadState('networkidle');
-    await plpPage.validateChooseOptionDrawer();
-    await plpPage.clickOnMultiplePDPSizeVariantButton();
-    await plpPage.clickOnViewMoreDetails();
+  // //SB-PLPADC0017
+  // test.skip("Validate View More Option in Choose Options drawer in PLP", async ({ page }) => {
+  //   //test.slow();
+  //   //const homePage = new HomePage(page);
+  //   const plpPage = new MasonPLPPage(page);
+  //   const homePageNew = new HomePageNew(page);
+  //   const pdpPage = new PDPPage(page);
+  //   await page.goto(plp_data.plp_url_with_size_color);
+  //   //await page.waitForLoadState('networkidle');
+  //   await plpPage.validateItemCount();
+  //   await plpPage.validatePresenceOfFilter();
+  //   await plpPage.clickQuickView();
+  //   ////await page.waitForLoadState('networkidle');
+  //   await plpPage.validateChooseOptionDrawer();
+  //   await plpPage.clickOnMultiplePDPSizeVariantButton();
+  //   await plpPage.clickOnViewMoreDetails();
 
-  })
+  // })
 
   // //SB-PLPADC0035
   // test.skip("Validate Credit Text in Choose Options drawer in PLP", async ({ page }) => {
